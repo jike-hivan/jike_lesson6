@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="description" content="javascript计算器，由脚本之家制作" />
+  <title>计算器</title>
+  <script type="text/javascript">
+  alert("本计算器由脚本之家制作");
+
+  function getResult(type) {
+    if (checkData()) {}
+    var no1 = parseInt(document.jisuanqi.no1.value);
+    var no2 = parseInt(document.jisuanqi.no2.value);
+    var result;
+    switch (type) {
+      case '+':
+        result = no1 + no2;
+        break;
+      case '-':
+        result = no1 - no2;
+        break;
+      case '*':
+        result = no1 * no2;
+        break;
+      case '/':
+        result = no1 / no2;
+        break;
+      case '%':
+        result = no1 % no2;
+        break;
+    }
+    document.jisuanqi.result.value = result;
+  }
+
+  function checkData() {
+    if (document.jisuanqi.no1.value == "") {
+      alert("第一个数字不能为空!请重新输入");
+      return;
+    }
+    if (document.jisuanqi.no2.value == "") {
+      alert("第二个不能为空!请重新输入");
+      return;
+    }
+    if (document.jisuanqi.no1.value == "0") {
+      alert("第一个不能为零!请重新输入");
+      return;
+    }
+    if (isNaN(document.jisuanqi.no1.value)) {
+      alert("第一个不是数字!请重新输入");
+      return;
+    }
+    if (isNaN(document.jisuanqi.no2.value)) {
+      alert("第二个不是数字!请重新输入");
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <font size="6" color="#000000">本计算器由脚本之家制作
+    <br>QQ：873695957</font>
+  <p align="center" />
+  <form name="jisuanqi">
+    no1:
+    <input name="no1" />
+    <br> no2:
+    <input name="no2" />
+    <br> result:
+    <input name="result" />
+    <br>
+    <input type="button" value="+" onclick="getResult('+')" />
+    <input type="button" value="-" onclick="getResult('-')" />
+    <input type="button" value="*" onclick="getResult('*')" />
+    <input type="button" value="/" onclick="getResult('/')" />
+    <input type="button" value="%" onclick="getResult('%')" />
+  </form>
+  </p>
+</body>
+
+</html>

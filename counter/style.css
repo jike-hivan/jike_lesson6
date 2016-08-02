@@ -1,0 +1,79 @@
+.counter-wrap {
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-family: Arial;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border:none;
+  background-color: #ddd;
+}
+
+caption {
+  background-color: #fff;
+  height: 54px;
+  line-height: 54px;
+  color: #333;
+  font-size: 24px;
+}
+
+
+th,
+td {
+  cursor: pointer;
+}
+
+th {
+  height: 74px;
+  vertical-align: bottom;
+  font-size: 48px;
+  background-color: #888;
+  color: #fff;
+  font-weight: normal;
+  text-align: right;
+  border: 1px solid #888;
+  padding: 10px;
+}
+
+th input{
+  width: 100%;
+  padding: 0;
+  font-size: 36px;
+  color:#fff;
+  background-color: #888;
+  border:none;
+  text-align:right;
+}
+
+td {
+  text-align: center;
+  border: 1px solid #888;
+  width: 24%;
+}
+
+td input {
+  color: #333;
+  font-size: 24px;
+  line-height: 46px;
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+tr td:last-child{
+  background-color: darkorange;
+}
+
+tr td:last-child input{
+  color: #fff;
+}

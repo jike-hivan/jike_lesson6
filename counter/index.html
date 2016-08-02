@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>counter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="counter-wrap">
+    <div class="counter-inner">
+      <table>
+        <caption>计算器</caption>
+        <thead>
+          <tr>
+            <th colspan="4">
+              <input type="text" value="" id="sum" name="sum" readonly>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="button" value="AC" id="ac" onclick="clearAll();">
+            </td>
+            <td>
+              <input type="button" value="del" id="del" onclick="backspace();">
+            </td>
+            <td>
+              <input type="button" value="%" id="per" onclick="calculation(this);">
+            </td>
+            <td>
+              <input type="button" value="&divide;" id="division" onclick="calculation(this);">
+            </td>
+          </tr>
+          <tr>
+            <td> <input type="button" value="7" id="num7" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="8" id="num8" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="9" id="num9" onclick="connectionDigital(this);"></td>
+            <td><input type="button" value="&times;" id="times" onclick="calculation(this);"></td>
+          </tr>
+          <tr>
+            <td> <input type="button" value="4" id="num4" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="5" id="num5" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="6" id="num6" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="-" id="inus" onclick="calculation(this);"></td>
+          </tr>
+          <tr>
+            <td> <input type="button" value="1" id="num1" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="2" id="num2" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="3" id="num3" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="+" id="add" onclick="calculation(this);"></td>
+          </tr>
+          <tr>
+            <td colspan="2"> <input type="button" value="0" id="num0" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="." id="dot" onclick="connectionDigital(this);"></td>
+            <td> <input type="button" value="=" id="to" onclick="getResult();"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="counter.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>计算器</title>
+  <style type="text/css">
+  * {
+    margin: 0px;
+    padding: 0px
+  }
+  
+  table {
+    width: 300px;
+    margin: 100px auto
+  }
+  
+  td {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    font-size: 14px
+  }
+  
+  input {
+    float: left;
+    margin-left: 30px;
+    display: inline
+  }
+  
+  #jia,
+  #jian,
+  #cheng,
+  #chu {
+    width: 30px
+  }
+  </style>
+  <script type="text/javascript">
+  //以下所有的注释通用语所有的加减乘除算法。
+  //加法运算
+  function jia() {
+    //定义变量a,b,c
+    var x, y, z;
+  }; //通过document分别获取x，y的值 x=document.getElementById("num1").value; y=document.getElementById("num2").value; //修改x，y的字符类型，并且得到z的值 z=parseInt(x)+parseInt(y); //将z的值赋给id=result document.getElementById("result").value=z;
+  //减法运算
+  function jian() {
+    var x, y, z;
+    x = document.getElementById("num1").value;
+    y = document.getElementById("num2").value;
+    z = parseInt(x) - parseInt(y);
+    document.getElementById("result").value = z;
+  };
+  //乘法运算
+  function cheng() {
+    var x, y, z;
+    x = document.getElementById("num1").value;
+    y = document.getElementById("num2").value;
+    z = parseInt(x) * parseInt(y);
+    document.getElementById("result").value = z;
+  };
+  //除法运算
+  function chu() {
+    var x, y, z;
+    x = document.getElementById("num1").value;
+    y = document.getElementById("num2").value;
+    z = parseInt(x) / parseInt(y);
+    document.getElementById("result").value = z;
+  };
+  </script>
+</head>
+
+<body>
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="2">计算器</td>
+    </tr>
+    <tr>
+      <td>数字一</td>
+      <td>
+        <input type="text" id="num1" name="num1">
+      </td>
+    </tr>
+    <tr>
+      <td>数字二</td>
+      <td>
+        <input type="text" id="num2" name="num2">
+      </td>
+    </tr>
+    <tr>
+      <td>结果</td>
+      <td>
+        <input type="text" id="result" name="result">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="button" name="jia" id="jia" value="+" onclick="jia()">
+        <input type="button" name="jian" id="jian" value="-" onclick="jian()">
+        <input type="button" name="cheng" id="cheng" value="×" onclick="cheng()">
+        <input type="button" name="chu" id="chu" value="/" onclick="chu()"> </td>
+    </tr>
+  </table>
+</body>
+
+</html>
